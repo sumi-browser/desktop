@@ -1,6 +1,7 @@
 engine/
 node_modules/
 .mozbuild/
+.surfer/
 dist/
 *.mar
 *.exe

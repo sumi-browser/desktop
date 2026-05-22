@@ -36,6 +36,15 @@ sumi-browser/
 └── package.json     # npm スクリプト
 ```
 
+## engine/ パッチ（surfer reset 後に再適用が必要）
+`surfer reset` や `surfer download --force` 後は以下を実行:
+```bash
+python scripts/apply-engine-patches.py
+```
+パッチ内容:
+1. `mozconfig.py` — 日本語 Windows での UTF-8 デコードエラー修正
+2. `data.py` — Unified ファイル名の切り詰めロジック修正（WebRTC ビルドエラー回避）
+
 ## 開発ワークフロー
 1. `engine/` 内のファイルを編集
 2. `npm run status` で変更確認
