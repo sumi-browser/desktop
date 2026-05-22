@@ -1,0 +1,66 @@
+# Firefox default overrides for Sumi Browser
+# Disable Firefox features we don't want
+
+# ===== Sidebar & Vertical Tabs =====
+# Enable the new sidebar UI
+- name: sidebar.revamp
+  value: true
+
+# Use vertical tabs by default
+- name: sidebar.verticalTabs
+  value: true
+
+# Sidebar position: left (start)
+- name: sidebar.position_start
+  value: true
+
+# Sidebar animations
+- name: sidebar.animation.enabled
+  value: true
+
+- name: sidebar.animation.duration-ms
+  value: 200
+
+- name: sidebar.animation.expand-on-hover.delay-duration-ms
+  value: 300
+
+# Round content area corners
+- name: sidebar.revamp.round-content-area
+  value: true
+
+# Sidebar always visible
+- name: sidebar.visibility
+  value: always-show
+
+# ===== Disable Bloat =====
+# Disable Firefox accounts / Sync UI (plugin territory)
+- name: identity.fxaccounts.enabled
+  value: false
+
+# Disable Pocket
+- name: extensions.pocket.enabled
+  value: false
+
+# Disable Firefox View button
+- name: browser.tabs.firefox-view
+  value: false
+
+# Disable sponsored content
+- name: browser.newtabpage.activity-stream.showSponsored
+  value: false
+
+- name: browser.newtabpage.activity-stream.showSponsoredTopSites
+  value: false
+
+# ===== Privacy =====
+# Disable telemetry
+- name: toolkit.telemetry.enabled
+  value: false
+
+- name: datareporting.healthreport.uploadEnabled
+  value: false
+
+# ===== Theme =====
+# Dark theme preference
+- name: ui.systemUsesDarkTheme
+  value: 1

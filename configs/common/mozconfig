@@ -1,0 +1,31 @@
+# Sumi Browser mozconfig
+
+ac_add_options --enable-application=browser
+ac_add_options --with-app-name=sumi
+ac_add_options --with-branding=browser/branding/unofficial
+ac_add_options --with-distribution-id=app.sumi-browser
+
+# Locales
+ac_add_options --with-l10n-base=$topsrcdir/browser/locales
+
+# Build optimizations (debug build for development)
+ac_add_options --enable-optimize
+ac_add_options --disable-debug
+
+# Disable telemetry and crash reporting
+ac_add_options --disable-crashreporter
+ac_add_options MOZ_TELEMETRY_REPORTING=
+ac_add_options MOZ_DATA_REPORTING=
+
+# Enable JXL image format
+ac_add_options --enable-jxl
+
+# Allow unsigned extensions
+ac_add_options MOZ_REQUIRE_SIGNING=
+export MOZ_ALLOW_ADDON_SIDELOAD=1
+
+# Use sccache if available
+if command -v sccache &> /dev/null; then
+  mk_add_options "export RUSTC_WRAPPER=sccache"
+  ac_add_options --with-ccache=sccache
+fi

@@ -1,0 +1,30 @@
+# Sumi Browser core preferences
+# These are applied on top of Firefox defaults
+
+- name: sumi.sidebar.width.collapsed
+  value: 48
+  description: Collapsed sidebar width in px
+
+- name: sumi.sidebar.width.expanded
+  value: 240
+  description: Expanded sidebar width in px
+
+- name: sumi.sidebar.position
+  value: left
+  description: Sidebar position (left or right)
+
+- name: sumi.sidebar.hover.enabled
+  value: true
+  description: Expand sidebar on hover
+
+- name: sumi.sidebar.hover.delay
+  value: 300
+  description: Hover delay in ms before expanding sidebar
+
+- name: sumi.theme.mode
+  value: dark
+  description: Theme mode (dark, light, system)
+
+- name: sumi.command-palette.enabled
+  value: true
+  description: Enable command palette (Ctrl+T)

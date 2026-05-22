@@ -1,0 +1,5 @@
+# Sumi Browser Windows-specific mozconfig
+# Platform-specific settings are appended to configs/common/mozconfig
+
+# Windows SDK
+ac_add_options --target=x86_64-pc-windows-msvc
