@@ -55,7 +55,7 @@ def patch_unified_prefix():
 
     content = target.read_text(encoding="utf-8")
 
-    if "last_component = unified_prefix.rsplit" in content:
+    if 'unified_prefix.rsplit("/", 1)[-1]' in content:
         print("  SKIP: already patched")
         return False
 
@@ -66,12 +66,7 @@ def patch_unified_prefix():
 
     new = """            unified_prefix = context.relsrcdir
             if len(unified_prefix) > 20:
-                # Take the last path component to preserve uniqueness,
-                # then truncate if still too long.
-                last_component = unified_prefix.rsplit("/", 1)[-1]
-                if len(last_component) > 20:
-                    last_component = last_component[-20:]
-                unified_prefix = last_component
+                unified_prefix = unified_prefix.rsplit("/", 1)[-1]
             unified_prefix = unified_prefix.replace("/", "_")"""
 
     if old not in content:
