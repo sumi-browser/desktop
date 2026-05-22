@@ -1,0 +1,12 @@
+engine/
+node_modules/
+.mozbuild/
+dist/
+*.mar
+*.exe
+*.dmg
+*.deb
+*.rpm
+*.tar.bz2
+.DS_Store
+Thumbs.db

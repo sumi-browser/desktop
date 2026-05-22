@@ -1,0 +1,22 @@
+{
+  "name": "sumi-browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A minimal, plugin-extensible Firefox-based browser",
+  "scripts": {
+    "init": "surfer download && surfer bootstrap && surfer import",
+    "build": "surfer build",
+    "build:ui": "surfer build --ui",
+    "start": "surfer run",
+    "import": "surfer import",
+    "export": "surfer export-file",
+    "status": "surfer status",
+    "reset": "surfer reset",
+    "reset-ff": "surfer reset && surfer download --force",
+    "package": "surfer package"
+  },
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@zen-browser/surfer": "^1.14.6"
+  }
+}

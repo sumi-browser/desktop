@@ -1,0 +1,33 @@
+{
+  "name": "Sumi Browser",
+  "vendor": "Sumi",
+  "appId": "sumi",
+  "binaryName": "sumi",
+  "version": {
+    "product": "firefox",
+    "version": "151.0.1",
+    "candidate": "151.0.1",
+    "candidateBuild": 1
+  },
+  "buildOptions": {
+    "generateBranding": true
+  },
+  "addons": {},
+  "brands": {
+    "release": {
+      "backgroundColor": "#121212",
+      "brandShorterName": "Sumi",
+      "brandShortName": "Sumi",
+      "brandFullName": "Sumi Browser",
+      "release": {
+        "displayVersion": "0.1.0a"
+      }
+    }
+  },
+  "license": {
+    "ignoredFiles": [
+      ".*\\.json"
+    ],
+    "licenseType": "MPL-2.0"
+  }
+}
